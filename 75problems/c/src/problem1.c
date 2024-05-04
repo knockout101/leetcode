@@ -46,7 +46,14 @@ char* mergeAlternately(char* word1, char* word2)
 	}
 	else
 	{
+		for(; i < s1; i++)
+		{
+			res[j] = word1[i];
+			res[j + 1] = word2[i];
+			j += 2;
+		}
 		
+		res[j] = '\0';
 	}
 	return res;
 }
